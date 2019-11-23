@@ -17,7 +17,7 @@ sub lcm {
   return int(($x * $y) / gcd($x, $y));
 }
 
-# from 1 to 2
+# from 1 to 20
 @range = (1..20);
 
 # psuedo-reduce
