@@ -13,7 +13,6 @@ def isprime(n: int) -> bool:
     >>> isprime(8)
     False
     """
-    n = abs(n)
     if n < 2:
         return False
     elif n == 2:
