@@ -1,0 +1,72 @@
+#!/usr/bin/env python3
+
+"""Script to create a new directory and README"""
+
+import os
+import glob
+import tempfile
+
+from pathlib import Path
+from subprocess import call
+
+import termcolor
+
+# cd into the root dir
+os.chdir(os.path.dirname(os.path.abspath(__file__))) 
+
+# get a list of all the directories
+dirs = glob.glob("???-*")
+
+# sort according to problem number
+dirs.sort(key=lambda dirname: int(dirname[:3]))
+
+prev_problem_number = int(dirs[-1][:3])
+prob_number = prev_problem_number + 1
+
+# get language name from user
+language_name = input("Language Name (for folder)? ")
+
+new_dir_path = "{}-{}".format(str(prob_number).zfill(3), language_name)
+
+# confirm directory
+override = input("Hit enter to confirm '{}' or type in an alternative: ".format(termcolor.colored(new_dir_path, "green"))).strip()
+
+# if overriden, save that
+if override:
+    new_dir_path = override
+
+# language version for readme
+language_ver = input("Language name + version? ").strip()
+
+# create dir
+os.mkdir(new_dir_path)
+
+# crate Makefile
+
+with open(f"{new_dir_path}/Makefile", 'w') as makefile:
+    makefile.write("run:\n")
+
+README_STR = f"""## [Problem {prob_number}](https://projecteuler.net/problem={prob_number})
+
+Language: {language_ver}
+
+##### Requires
+
+- [``]()"""
+
+# open README string in vimbuffer so that requirements can be added
+
+EDITOR = os.environ.get('EDITOR', 'nvim')
+
+with tempfile.NamedTemporaryFile(suffix=".tmp") as tf:
+    tf.write(README_STR.encode())
+    tf.flush()
+    call([EDITOR, tf.name])
+
+    tf.seek(0)
+    FINAL_README_STR = tf.read().decode('utf-8')
+
+with open(f"{new_dir_path}/README.md", 'w') as readme:
+    readme.write(FINAL_README_STR)
+
+print("Done!")
