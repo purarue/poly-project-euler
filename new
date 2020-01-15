@@ -4,12 +4,9 @@
 
 import os
 import glob
-import tempfile
-
-from pathlib import Path
-from subprocess import call
 
 import termcolor
+import vimbuffer
 
 # cd into the root dir
 os.chdir(os.path.dirname(os.path.abspath(__file__))) 
@@ -54,19 +51,7 @@ Language: {language_ver}
 
 - [``]()"""
 
-# open README string in vimbuffer so that requirements can be added
-
-EDITOR = os.environ.get('EDITOR', 'nvim')
-
-with tempfile.NamedTemporaryFile(suffix=".tmp") as tf:
-    tf.write(README_STR.encode())
-    tf.flush()
-    call([EDITOR, tf.name])
-
-    tf.seek(0)
-    FINAL_README_STR = tf.read().decode('utf-8')
-
 with open(f"{new_dir_path}/README.md", 'w') as readme:
-    readme.write(FINAL_README_STR)
+    readme.write(vimbuffer.buffer(string=README_STR))
 
 print("Done!")
