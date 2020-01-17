@@ -1,0 +1,2 @@
+run:
+	groovy Main.groovy
