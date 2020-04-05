@@ -13,14 +13,7 @@ os.environ["VIMBUFFER_EDITOR"] = "nvim"
 # cd into the root dir
 os.chdir(os.path.dirname(os.path.abspath(__file__))) 
 
-# get a list of all the directories
-dirs = glob.glob("???-*")
-
-# sort according to problem number
-dirs.sort(key=lambda dirname: int(dirname[:3]))
-
-prev_problem_number = int(dirs[-1][:3])
-prob_number = prev_problem_number + 1
+prob_number = int(input("Problem Number: "))
 
 # get language name from user
 language_name = input("Language Name (for folder)? ")
