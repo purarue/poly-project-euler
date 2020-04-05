@@ -8,4 +8,4 @@ class Integer
   end
 end
 
-puts (2*20).factorial / 20.factorial ** 2
+puts (2 * 20).factorial / 20.factorial ** 2

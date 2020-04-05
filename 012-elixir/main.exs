@@ -1,5 +1,4 @@
 defmodule TriangleNumbers do
-
   # My solution recalculated the triangle number each time, which
   # ended up taking a few minutes
   #
@@ -19,20 +18,23 @@ defmodule TriangleNumbers do
   """
   def factors(n) do
     end_range = trunc(:math.sqrt(n)) + 1
-    Enum.flat_map(1..end_range, fn x ->
-        case rem(n, x) do
-          0 -> [x, trunc(n/x)]
-          _ -> []
-        end
-      end) |> MapSet.new |> MapSet.size  # MapSet to remove duplicates if perfect square
-  end
 
+    Enum.flat_map(1..end_range, fn x ->
+      case rem(n, x) do
+        0 -> [x, trunc(n / x)]
+        _ -> []
+      end
+    end)
+    # MapSet to remove duplicates if perfect square
+    |> MapSet.new()
+    |> MapSet.size()
+  end
 end
 
 # TriangleNumbers.triangles |> Enum.take(7) |> IO.inspect
 
-TriangleNumbers.triangles
-  |> Stream.drop_while(fn(x) -> TriangleNumbers.factors(x) <= 500 end)
-  |> Enum.take(1)
-  |> Enum.at(0)
-  |> IO.puts
+TriangleNumbers.triangles()
+|> Stream.drop_while(fn x -> TriangleNumbers.factors(x) <= 500 end)
+|> Enum.take(1)
+|> Enum.at(0)
+|> IO.puts()

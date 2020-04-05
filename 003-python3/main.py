@@ -35,7 +35,7 @@ def find_prime_factors(n: int) -> List[int]:
     """
     prime_factors = []
     for x in range(1, int(n ** 0.5) + 2):
-        if n % x == 0 and isprime(x) == True:
+        if n % x == 0 and isprime(x):
             prime_factors.append(x)
     return prime_factors
 

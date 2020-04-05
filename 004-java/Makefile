@@ -1,6 +1,4 @@
-run: compile
-	java Main
-compile:
-	javac Main.java
+run:
+	java Main.java
 clean:
 	rm Main.class
