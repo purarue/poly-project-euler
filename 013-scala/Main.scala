@@ -4,13 +4,14 @@ object Main {
 
   def main(args: Array[String]): Unit = {
     println(
-      Source.fromFile("numbers.txt")
+      Source
+        .fromFile("numbers.txt")
         .getLines
         .toList
-        .map({n: String => BigInt(n)})
+        .map({ n: String => BigInt(n) })
         .reduce(_ + _)
         .toString
         .take(10)
-      )
+    )
   }
 }
