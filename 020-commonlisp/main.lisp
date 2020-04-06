@@ -1,6 +1,6 @@
 (defun factorial (num)
   "calculate the factorial of the integer num"
-  (if (= num 1)
+  (if (< num 2)
     num
     (* num (factorial (- num 1))))
   )
