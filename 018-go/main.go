@@ -100,5 +100,5 @@ func main() {
 	}
 	maxVal, _ := calculateMaxValue(tree, 0, 0)
 	// printTree(tree)
-	fmt.Printf("Max Value: %d\n", maxVal)
+	fmt.Printf("%d\n", maxVal)
 }
