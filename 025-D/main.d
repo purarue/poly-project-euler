@@ -10,7 +10,6 @@ const ulong STRLEN = 1000;
 struct FibonacciRange {
   // start with F0
   BigInt x = "0", y = "1";
-  int n = 0;
 
   // range never ends
   enum empty = false;
@@ -27,7 +26,6 @@ struct FibonacciRange {
     auto t = x;
     x = y;
     y = t + y;
-    n = n + 1;
   }
 }
 
