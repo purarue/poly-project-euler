@@ -1,0 +1,2 @@
+run:
+	coffee main.coffee
