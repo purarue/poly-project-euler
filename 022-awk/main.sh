@@ -13,9 +13,8 @@ BEGIN {
 END {
   asort(arr, sorted_arr);  # sort all input alphabetically
   # print names out alphabetically
-  for (i = 1; i <= length(sorted_arr); i += 1) {
+  for (i = 1; i <= length(sorted_arr); i += 1)
     print sorted_arr[i]
-  }
 }
 ' "./names.txt" | awk \
 	'
