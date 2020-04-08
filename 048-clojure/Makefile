@@ -1,0 +1,2 @@
+run:
+	clojure main.clj
