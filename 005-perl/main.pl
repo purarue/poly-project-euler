@@ -20,7 +20,7 @@ sub lcm {
 # from 1 to 20
 @range = ( 1 .. 20 );
 
-# psuedo-reduce
+# pseudo-reduce
 while ( $#range > 1 ) {    # while there are at least 2 items in the array
                            # remove the first 2 tokens, and unshift the LCM back
                            # onto the front of the array

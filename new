@@ -23,7 +23,7 @@ new_dir_path = "{}-{}".format(str(prob_number).zfill(3), language_name)
 # confirm directory
 override = input("Hit enter to confirm '{}' or type in an alternative: ".format(termcolor.colored(new_dir_path, "green"))).strip()
 
-# if overriden, save that
+# if overridden, save that
 if override:
     new_dir_path = override
 

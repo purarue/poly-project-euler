@@ -18,7 +18,7 @@ END {
 }
 ' "./names.txt" | awk \
 	'
-# calulate the the result
+# calculate the the result
 BEGIN {
   convert="ABCDEFGHIJKLMNOPQRSTUVWXYZ"  # lookup map
   result = 0  # initialize final answer
