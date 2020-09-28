@@ -11,7 +11,7 @@ import vimbuffer
 os.environ["VIMBUFFER_EDITOR"] = "nvim"
 
 # cd into the root dir
-os.chdir(os.path.dirname(os.path.abspath(__file__))) 
+os.chdir(os.path.dirname(os.path.abspath(__file__)))
 
 prob_number = int(input("Problem Number: "))
 
@@ -21,7 +21,11 @@ language_name = input("Language Name (for folder)? ")
 new_dir_path = "{}-{}".format(str(prob_number).zfill(3), language_name)
 
 # confirm directory
-override = input("Hit enter to confirm '{}' or type in an alternative: ".format(termcolor.colored(new_dir_path, "green"))).strip()
+override = input(
+    "Hit enter to confirm '{}' or type in an alternative: ".format(
+        termcolor.colored(new_dir_path, "green")
+    )
+).strip()
 
 # if overridden, save that
 if override:
@@ -35,7 +39,7 @@ os.mkdir(new_dir_path)
 
 # crate Makefile
 
-with open(f"{new_dir_path}/Makefile", 'w') as makefile:
+with open(f"{new_dir_path}/Makefile", "w") as makefile:
     makefile.write("run:\n")
 
 README_STR = f"""## [Problem {prob_number}](https://projecteuler.net/problem={prob_number})
@@ -46,7 +50,7 @@ Language: {language_ver}
 
 - [``]()"""
 
-with open(f"{new_dir_path}/README.md", 'w') as readme:
+with open(f"{new_dir_path}/README.md", "w") as readme:
     readme.write(vimbuffer.buffer(string=README_STR))
 
 print("Done!")
