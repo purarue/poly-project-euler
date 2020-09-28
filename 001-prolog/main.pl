@@ -1,4 +1,3 @@
-
 /* check if divisible by 3 or 5 */
 in_set(N) :- 0 is N mod 3, !.
 in_set(N) :- 0 is N mod 5.
