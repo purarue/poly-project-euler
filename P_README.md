@@ -14,7 +14,8 @@ Purpose for this is dependent on the language/problem. If its a language I'm fam
 while IFS= read -r readme; do
   lang_ver="$(grep -m1 -oP 'Language: (.*)$' "${readme}" | sed -e 's/Language:\s*//')"
   lang_name="$(dirname "${readme}" | cut -d"-" -f2)"
-  printf '* [`%s`](%s) (%s)\n' "${lang_name}" "$(dirname "${readme}")" "${lang_ver}"
-done < <(find -mindepth 2 -name README.md | sort -n)
+  euler_prob="$(dirname "${readme}" | sed -e 's/[^0-9]*//g' | bc -l)"
+  printf '* Problem \# %d: [`%s`](%s) (%s)\n' "${euler_prob}" "${lang_name}" "$(dirname "${readme}")" "${lang_ver}"
+done < <(find . -mindepth 2 -name README.md | sort -n)
 ```
 
