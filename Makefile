@@ -1,8 +1,8 @@
 # silly makefile to run all solutions
 
-cleanAll: runAll
+clean: cleanAll
 runAll:
 	find -mindepth 2 -type f -name "Makefile" -execdir make \;
-clean:
+cleanAll:
 	find -mindepth 2 -type f -name "Makefile" -execdir make clean \;
 
