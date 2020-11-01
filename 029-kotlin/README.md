@@ -4,4 +4,4 @@ Language: Kotlin 1.4.10
 
 ##### Requires
 
-- [`kotlin`](https://kotlinlang.org/)
+- [`kotlinc`](https://kotlinlang.org/)
