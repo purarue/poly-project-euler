@@ -31,7 +31,7 @@ let rec circularPrimeAcc (st: Set<int>) (cur: int) (till: int) =
   // already been processed on some other recurse
   elif st.Contains(cur) then circularPrimeAcc st (cur + 1) till
   // this is a circular prime, add all cycles
-  elif isCircularPrime cur then circularPrimeAcc (Set.union st (Set.ofSeq (cycleNum cur))) (cur + 1) till
+  elif isCircularPrime cur then circularPrimeAcc (Set.union st (cycleNum cur |> Set.ofSeq)) (cur + 1) till
   // not a circular prime, continue
   else circularPrimeAcc st (cur + 1) till
 
