@@ -1,7 +1,7 @@
-let sqrt n = (float >> sqrt >> int) n
+let sqrtint n = (float >> sqrt >> int) n
 
 let isPrime n =
-  [ 2 .. sqrt n ]
+  [ 2 .. sqrtint n ]
   |> List.forall ( fun x -> n % x <> 0)
 
 // cycles a list, starting at 'from'
