@@ -3,7 +3,7 @@ import 'dart:math' show sqrt;
 bool is_prime(int n) {
   if (n < 2) {
     return false;
-  } else if (n == 2) { 
+  } else if (n == 2) {
     return true;
   } else {
     int upperlimit = sqrt(n).round() + 1;
@@ -17,11 +17,10 @@ bool is_prime(int n) {
 }
 
 void main() {
-  
   int sum_of_primes = 0;
   for (int i = 0; i <= 2000000; i++) {
     if (is_prime(i)) {
-     sum_of_primes += i;
+      sum_of_primes += i;
     }
   }
   print(sum_of_primes);
