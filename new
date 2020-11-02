@@ -52,5 +52,3 @@ Language: {language_ver}
 
 with open(f"{new_dir_path}/README.md", "w") as readme:
     readme.write(vimbuffer.buffer(string=README_STR))
-
-print("Done!")
