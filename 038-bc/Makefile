@@ -1,0 +1,2 @@
+run:
+	bc <./main.bc

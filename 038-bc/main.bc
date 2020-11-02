@@ -1,0 +1,37 @@
+define is_valid_triangle(a1, b1, c1) {
+  return (! ((a1 + b1 <= c1) || (a1 + c1 <= b1) || (b1 + c1 <= a1)))
+}
+
+define is_right_triangle(a2, b2, c2) {
+  return (a2^2 + b2^2 == c2^2)
+}
+
+/* brute force, but with some checks */
+
+side_limit = 500
+perimeter_limit = 1000
+
+/* dont need to check till 1000 since triangle side length */
+for (a = 1; a < side_limit; a++) {
+  for (b = 1; b < side_limit; b++) {
+    for (c = 1; c < side_limit; c++) {
+      perimeter = a + b + c
+      if (perimeter <= perimeter_limit && is_valid_triangle(a, b, c) && is_right_triangle(a, b, c)) {
+        print a, " + ", b, " + ", c, " = ", perimeter, "\n"
+        /* the variable assignment is just so this doesnt print anything */
+        silenced = solutions[perimeter]++
+      }
+    }
+  }
+}
+
+max_solns_for = 0
+max_solns = solutions[max_solns_for]
+for (k = 1; k <= perimeter_limit; k++) {
+  if (solutions[k] > max_solns) {
+    max_solns_for = k
+    max_solns = solutions[max_solns_for]
+  }
+}
+
+print max_solns_for, "\n"
