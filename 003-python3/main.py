@@ -1,10 +1,8 @@
 #!/usr/bin/env python3
 
 from typing import Iterator
-from functools import lru_cache
 
 
-@lru_cache(maxsize=None)
 def isprime(n: int) -> bool:
     if n < 2:
         return False
