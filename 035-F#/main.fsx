@@ -10,8 +10,7 @@ let isPrime n =
 // returns a joined string of the result
 let cycle (lst: List<char>) (from: int) =
   [ for i in from..(lst.Length + from - 1) do yield lst.[i % lst.Length] ]
-  |> Seq.toList
-  |> List.fold ( fun acc c -> acc + (string c)) ""
+  |> Seq.fold ( fun acc c -> acc + (string c)) ""
 
 // cycles a number
 // e.g. 123 -> [123, 231, 312]
