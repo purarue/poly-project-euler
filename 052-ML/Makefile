@@ -1,0 +1,2 @@
+run:
+	smlnj ./main.sml
