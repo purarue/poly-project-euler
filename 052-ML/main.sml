@@ -1,7 +1,7 @@
 (* split a number into into a set of digits *)
 fun splitInt num =
-  IntListSet.fromList (List.map Option.valOf (List.map (fn (item) => Int.fromString
-  (Char.toString item)) (explode (Int.toString num))));
+  IntListSet.fromList (List.map (fn (item) => Option.valOf (Int.fromString
+  (Char.toString item))) (explode (Int.toString num)));
 
 fun permutedMult base mult =
   if mult = 6 then base else (* found the result *)
