@@ -33,6 +33,7 @@ Purpose for this is dependent on the language/problem. If its a language I'm fam
 * [Problem \#23](https://projecteuler.net/problem=23): [`erlang`](./023-erlang) (Erlang/OTP 22 [erts-10.6.4])
 * [Problem \#24](https://projecteuler.net/problem=24): [`octave`](./024-octave) (GNU Octave, version 5.2.0)
 * [Problem \#25](https://projecteuler.net/problem=25): [`D`](./025-D) (DMD64 D Compiler v2.091.0)
+* [Problem \#28](https://projecteuler.net/problem=28): [`logo`](./028-logo) (UCBLogo 5.6)
 * [Problem \#29](https://projecteuler.net/problem=29): [`kotlin`](./029-kotlin) (Kotlin 1.4.10)
 * [Problem \#30](https://projecteuler.net/problem=30): [`lua`](./030-lua) (Lua 5.4.1)
 * [Problem \#34](https://projecteuler.net/problem=34): [`rust`](./034-rust) (rustc 1.47.0 (18bf6b4f0 2020-10-07))

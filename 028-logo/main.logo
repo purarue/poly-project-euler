@@ -1,0 +1,40 @@
+HOME
+MAKE "NUM 1 ; number under cursor
+MAKE "DIFF 1 ; space between elements
+MAKE "ROWS 1 ; number of rows in square
+MAKE "RESULT 1 ; resulting number
+MAKE "DRAWSIZE 1 ; distance the cursor moves
+PENDOWN;
+RT 90 ; turn to the right
+WHILE [ :ROWS < 1000 ] [
+  ; escape into next row (towards the right)
+  MAKE "NUM SUM :NUM 1
+  FD :DRAWSIZE
+  ; point towards bottom right corner
+  RT 90
+  ; move to bottom right corner (is just the current diff)
+  MAKE "DIST :DIFF
+  FD PRODUCT :DIST :DRAWSIZE
+  MAKE "NUM SUM :NUM :DIST ; increment current number by distance traveled
+  ; add bottom right corner to result
+  MAKE "RESULT SUM :RESULT :NUM
+  ; move to bottom left,
+  ; top left, then top right
+  REPEAT 3 [
+    ; turn to point to next corner
+    RT 90
+    ; calculate distance to corner (diff + 1, to the corner)
+    MAKE "DIST SUM DIFF 1
+    MAKE "NUM SUM :NUM :DIST ; add to current number
+    MAKE "RESULT SUM :RESULT :NUM ; add corner to result
+    FD PRODUCT :DIST :DRAWSIZE ; move cursor
+  ]
+  ; increment distance between elements by 2 (new rows)
+  MAKE "DIFF SUM :DIFF 2
+  ; increment number of rows by 2
+  MAKE "ROWS SUM :ROWS 2
+  PRINT :RESULT
+  WAIT 1 ; flush stdout
+]
+WAIT 120 ; wait for a moment before closing
+BYE ; exit

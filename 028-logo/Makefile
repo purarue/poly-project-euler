@@ -1,0 +1,2 @@
+run:
+	logo ./main.logo
