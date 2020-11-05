@@ -25,13 +25,13 @@ isPandigital: n
     ^ (st size == (st asSortedCollection last digitValue))
 !
 solve
-    " any odd pandigital bigger than this is divisible by 3"
+    "any odd pandigital bigger than this is divisible by 3"
     9999999 to: 1 by: -2 do: [:n |
-      (self isPandigital: n)
-      ifTrue: [
-        (self isPrime: n)
-        ifTrue: [ ^n. ].
-      ].
+        (self isPandigital: n)
+        ifTrue: [
+            (self isPrime: n)
+            ifTrue: [ ^n. ].
+        ].
     ].
 !!
 
