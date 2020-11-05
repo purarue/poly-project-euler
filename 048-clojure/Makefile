@@ -1,2 +1,2 @@
 run:
-	clojure main.clj
+	clojure -M main.clj
