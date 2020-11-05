@@ -1,5 +1,3 @@
-| euler |
-
 Object
     subclass: #Euler
     instanceVariableNames: ''
@@ -35,6 +33,5 @@ solve
     ].
 !!
 
-euler := Euler new.
-euler solve printNl.
+Euler new solve printNl.
 
