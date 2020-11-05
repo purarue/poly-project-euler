@@ -40,6 +40,7 @@ Purpose for this is dependent on the language/problem. If its a language I'm fam
 * [Problem \#35](https://projecteuler.net/problem=35): [`F#`](./035-F%23/) (Microsoft (R) F# Compiler version 10.2.3 for F# 4.5)
 * [Problem \#36](https://projecteuler.net/problem=36): [`swift`](./036-swift/) (Swift version 5.3)
 * [Problem \#39](https://projecteuler.net/problem=39): [`bc`](./039-bc/) (bc 1.07.1)
+* [Problem \#41](https://projecteuler.net/problem=41): [`smalltalk`](./041-smalltalk/) (GNU Smalltalk version 3.2.92-edb6bad6)
 * [Problem \#48](https://projecteuler.net/problem=48): [`clojure`](./048-clojure/) (Clojure 1.10.1)
 * [Problem \#52](https://projecteuler.net/problem=52): [`ML`](./052-ML/) (Standard ML of New Jersey (64-bit) v110.98.1)
 * [Problem \#67](https://projecteuler.net/problem=67): [`golang`](./067-golang/) (go version go1.14.1 linux/amd64)
