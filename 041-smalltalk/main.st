@@ -28,7 +28,7 @@ solve
         (self isPandigital: n)
         ifTrue: [
             (self isPrime: n)
-            ifTrue: [ ^n. ].
+            ifTrue: [ ^ n. ].
         ].
     ].
 !!
