@@ -1,3 +1,4 @@
 tags*
 *.pdf
 __pycache__
+*.zip
