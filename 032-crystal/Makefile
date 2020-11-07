@@ -1,0 +1,2 @@
+run:
+	crystal ./main.cr
