@@ -1,10 +1,6 @@
 def is_pandigital(n)
   nset = (n.to_s.chars.map { |i| i.to_i }).to_set
-  if nset.includes?(0)
-    return false
-  else
-    return nset == Range.new(1, nset.max).to_set
-  end
+  return nset == Range.new(1, nset.max).to_set
 end
 
 def factors(n)
