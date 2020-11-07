@@ -36,6 +36,7 @@ Purpose for this is dependent on the language/problem. If its a language I'm fam
 - [Problem \#28](https://projecteuler.net/problem=28): [`logo`](./028-logo/) (UCBLogo 5.6)
 - [Problem \#29](https://projecteuler.net/problem=29): [`kotlin`](./029-kotlin/) (Kotlin 1.4.10)
 - [Problem \#30](https://projecteuler.net/problem=30): [`lua`](./030-lua/) (Lua 5.4.1)
+- [Problem \#33](https://projecteuler.net/problem=33): [`nim`](./033-nim/) (Nim Compiler Version 1.4.0)
 - [Problem \#34](https://projecteuler.net/problem=34): [`rust`](./034-rust/) (rustc 1.47.0 (18bf6b4f0 2020-10-07))
 - [Problem \#35](https://projecteuler.net/problem=35): [`F#`](./035-F%23/) (Microsoft (R) F# Compiler version 10.2.3 for F# 4.5)
 - [Problem \#36](https://projecteuler.net/problem=36): [`swift`](./036-swift/) (Swift version 5.3)
