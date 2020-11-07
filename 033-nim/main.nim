@@ -18,11 +18,10 @@ proc divideFrac(frac: Fraction): float =
   return frac.numerator / frac.denominator
 
 proc curFractionHelper(orig: Fraction, newFracNum: int, newFracDen: int): bool =
-  let
-    fr: Fraction = Fraction(numerator: newFracNum, denominator: newFracDen)
-    frVal: float = divideFrac(fr)
-  if fr.numerator == 0 or fr.denominator == 0:  # zero error
+  if newFracNum == 0 or newFracDen == 0:
     return false
+  let fr: Fraction = Fraction(numerator: newFracNum, denominator: newFracDen)
+  let frVal: float = divideFrac(fr)
   if frVal >= 1.0: # cant be more than one, by problem definition
     return false
   return divideFrac(orig) == frVal
