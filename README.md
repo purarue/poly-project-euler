@@ -41,6 +41,7 @@ Purpose for this is dependent on the language/problem. If its a language I'm fam
 - [Problem \#34](https://projecteuler.net/problem=34): [`rust`](./034-rust/) (rustc 1.47.0 (18bf6b4f0 2020-10-07))
 - [Problem \#35](https://projecteuler.net/problem=35): [`F#`](./035-F%23/) (Microsoft (R) F# Compiler version 10.2.3 for F# 4.5)
 - [Problem \#36](https://projecteuler.net/problem=36): [`swift`](./036-swift/) (Swift version 5.3)
+- [Problem \#37](https://projecteuler.net/problem=37): [`racket`](./037-racket/) (Racket v7.9)
 - [Problem \#39](https://projecteuler.net/problem=39): [`bc`](./039-bc/) (bc 1.07.1)
 - [Problem \#41](https://projecteuler.net/problem=41): [`smalltalk`](./041-smalltalk/) (GNU Smalltalk version 3.2.92-edb6bad6)
 - [Problem \#48](https://projecteuler.net/problem=48): [`clojure`](./048-clojure/) (Clojure 1.10.1)
