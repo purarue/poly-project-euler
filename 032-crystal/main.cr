@@ -15,8 +15,7 @@ pandigital_products = Set(Int32).new
 
 (1..9999).each do |n|
   factors(n).each do |m|
-    j = (n / m).to_i
-    pn = "#{j}#{m}#{n}"
+    pn = "#{(n/m).to_i}#{m}#{n}"
     # problem requires this to be 1 through 9 pandigital
     if pn.chars.to_set.size == 9 && is_pandigital(pn)
       pandigital_products << n
