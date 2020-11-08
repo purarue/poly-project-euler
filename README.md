@@ -48,3 +48,42 @@ Purpose for this is dependent on the language/problem. If its a language I'm fam
 - [Problem \#52](https://projecteuler.net/problem=52): [`ML`](./052-ML/) (Standard ML of New Jersey (64-bit) v110.98.1)
 - [Problem \#67](https://projecteuler.net/problem=67): [`golang`](./067-golang/) (go version go1.14.1 linux/amd64)
 
+---
+
+- 8.14%   Nim
+- 7.61%   Go
+- 6.16%   Makefile
+- 5.61%   Python
+- 5.54%   Groovy
+- 5.19%   Erlang
+- 4.94%   C#
+- 4.54%   Elm
+- 4.31%   F#
+- 3.87%   Shell
+- 3.23%   Elixir
+- 3.23%   Racket
+- 3.07%   CoffeeScript
+- 2.50%   Standard ML
+- 2.43%   D
+- 2.38%   Smalltalk
+- 2.28%   Perl
+- 2.12%   JavaScript
+- 2.06%   Rust
+- 2.01%   Java
+- 1.93%   Common Lisp
+- 1.87%   C++
+- 1.83%   PHP
+- 1.64%   Crystal
+- 1.42%   Dart
+- 1.35%   Lua
+- 1.27%   Prolog
+- 1.26%   Swift
+- 1.00%   C
+- 0.92%   Clojure
+- 0.88%   Scala
+- 0.80%   Julia
+- 0.76%   Ruby
+- 0.74%   MATLAB
+- 0.61%   Kotlin
+- 0.52%   Haskell
+
