@@ -1,2 +1,2 @@
 run:
-	sh main.sh
+	./main.sh
