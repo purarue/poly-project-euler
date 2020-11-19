@@ -11,7 +11,7 @@ is_factor(M, N) ->
 proper_divisors(N) -> proper_divisors(N div 2, 1, N, []).
 
 %% M: max (dont have to calculate past this)
-%% current value
+%% C: current value
 %% N: number to calculate for
 %% R: result (list)
 proper_divisors(M, C, _, R) when C > M -> R;
