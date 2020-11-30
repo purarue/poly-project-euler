@@ -55,7 +55,7 @@ Purpose for this is dependent on the language/problem. If its a language I'm fam
 - 6.16%   Makefile
 - 5.61%   Python
 - 5.54%   Groovy
-- 5.19%   Erlang
+- 5.20%   Erlang
 - 4.94%   C#
 - 4.54%   Elm
 - 4.31%   F#
