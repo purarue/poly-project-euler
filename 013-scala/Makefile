@@ -1,2 +1,2 @@
 run:
-	scala Main.scala
+	scala -deprecation Main.scala

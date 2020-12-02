@@ -6,7 +6,7 @@ object Main {
     println(
       Source
         .fromFile("numbers.txt")
-        .getLines
+        .getLines()
         .toList
         .map({ n: String => BigInt(n) })
         .reduce(_ + _)
