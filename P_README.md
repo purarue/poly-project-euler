@@ -19,10 +19,3 @@ while IFS= read -r readme; do
 done < <(find . -mindepth 2 -name README.md | sort -n)
 ```
 
----
-
-```
->>>PMARK
-#!/bin/sh
-github-linguist . | sed -e 's/^/- /'
-```
