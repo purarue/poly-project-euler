@@ -12,19 +12,22 @@ sub gcd($$) {
 
 # least common multiple
 # a * b == gcd(a, b) * lcm(a, b)
-sub lcm {
+sub lcm($$) {
     my ( $x, $y ) = @_;
     return int( ( $x * $y ) / gcd( $x, $y ) );
 }
 
-# from 1 to 20
-@range = ( 1 .. 20 );
+sub main($$) {
+    my ( $lo, $hi ) = @_;
+    my @range = ( $lo .. $hi );
 
-# pseudo-reduce
-while ( $#range > 1 ) {    # while there are at least 2 items in the array
-                           # remove the first 2 tokens, and unshift the LCM back
-                           # onto the front of the array
-    unshift( @range, lcm( shift(@range), shift(@range) ) );
+    # pseudo-reduce
+    while ( $#range > 1 ) {    # while there are at least 2 items in the array
+            # remove the first 2 tokens, and unshift the LCM back
+            # onto the front of the array
+        unshift( @range, lcm( shift(@range), shift(@range) ) );
+    }
+    return $range[0];
 }
 
-print( $range[0] . "\n" );
+print( main( 1, 20 ) . "\n" );
