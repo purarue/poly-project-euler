@@ -5,11 +5,9 @@ public class HelloWorld {
 
     // parse the matrix into a two dimensional array
     string[] lines = table.Split('\n');
-    int[, ] matrix = new int[20, 20];
+    int[,] matrix = new int[20, 20];
     for (int i = 0; i < 20; i++) {
-      string[] tokens = lines [i]
-                            .Trim()
-                            .Split(' ');
+      string[] tokens = lines[i].Trim().Split(' ');
       for (int j = 0; j < 20; j++) {
         matrix[i, j] = System.Convert.ToInt32(tokens[j]);
       }
