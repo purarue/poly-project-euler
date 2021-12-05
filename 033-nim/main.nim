@@ -17,14 +17,8 @@ proc simplifyFrac(frac: Fraction): Fraction =
 proc divideFrac(frac: Fraction): float =
   return frac.numerator / frac.denominator
 
-proc curFractionHelper(orig: Fraction, newFracNum: int, newFracDen: int): bool =
-  if newFracNum == 0 or newFracDen == 0:
-    return false
-  let fr: Fraction = Fraction(numerator: newFracNum, denominator: newFracDen)
-  let frVal: float = divideFrac(fr)
-  if frVal >= 1.0: # cant be more than one, by problem definition
-    return false
-  return divideFrac(orig) == frVal
+proc fractionCancels(orig: Fraction, newFracNum: int, newFracDen: int): bool =
+  return divideFrac(orig) == divideFrac(Fraction(numerator: newFracNum, denominator: newFracDen))
 
 proc isCuriousFraction(frac: Fraction): bool =
   let
@@ -33,29 +27,21 @@ proc isCuriousFraction(frac: Fraction): bool =
     denTens = (frac.denominator / 10).int
     denOnes = frac.denominator mod 10
 
-  # sanity check, should never be less than this due to problem definition
-  if frac.numerator < 10 or frac.denominator < 10:
-    return false
-
   # trivial fractons, e.g. 30/50
   if numOnes == 0 and denOnes == 0:
     return false
 
   # left cancelled left
-  if numTens == denTens:
-    if curFractionHelper(frac, numOnes, denOnes):
+  if numTens == denTens and fractionCancels(frac, numOnes, denOnes):
       return true
   # left cancelled right
-  if numTens == denOnes:
-    if curFractionHelper(frac, numOnes, denTens):
+  if numTens == denOnes and fractionCancels(frac, numOnes, denTens):
       return true
   # right cancelled left
-  if numOnes == denTens:
-    if curFractionHelper(frac, numTens, denOnes):
+  if numOnes == denTens and fractionCancels(frac, numTens, denOnes):
       return true
   # right cancelled right
-  if numOnes == denOnes:
-    if curFractionHelper(frac, numTens, dentens):
+  if numOnes == denOnes and fractionCancels(frac, numTens, denTens):
       return true
   return false
 
@@ -73,9 +59,9 @@ for den in 10..99:
   for num in 10..(den - 1):
     let fr = Fraction(numerator: num, denominator: den)
     if isCuriousFraction(fr):
-      let frSimplified = toStringFrac(simplifyFrac(fr))
-      if frSimplified notin found:
-        found.incl(frSimplified)
+      let frStr = toStringFrac(simplifyFrac(fr))
+      if frStr notin found:
+        found.incl(frStr)
         resultFracs.add(fr)
 
 # calculate product of resulting fractions
