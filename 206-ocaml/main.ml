@@ -1,9 +1,9 @@
 let rec combine_into_concealed_rec l1 l2 result =
   match l1, l2 with
   (* l2 has one less item than l1, if its empty, then just append l1s last item and return *)
-  | hd::[], [] -> int_of_string (result ^ hd)
+  | hd::[], [] -> int_of_string (String.concat "" (List.rev (hd :: result)))
   (* both still have values, extract head and zip onto result *)
-  | a::l1_tl, b::l2_tl -> combine_into_concealed_rec l1_tl l2_tl (result ^ a ^ String.make 1 b)
+  | a::l1_tl, b::l2_tl -> combine_into_concealed_rec l1_tl l2_tl (String.make 1 b :: a :: result)
   | _, _ -> raise (Invalid_argument "unexpected list size")
 ;;
 
@@ -12,7 +12,7 @@ let combine_into_concealed x =
   combine_into_concealed_rec
     ["1"; "2"; "3"; "4"; "5"; "6"; "7"; "8"; "9"; "0" ]
     (List.of_seq (String.to_seq (Printf.sprintf "%09d" x)))
-    ""
+    []
 ;;
 
 let is_perfect_square x = Float.is_integer (sqrt (Float.of_int x))
