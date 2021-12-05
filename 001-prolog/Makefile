@@ -1,6 +1,6 @@
-run: compile
+run: a.out
 	./a.out
-compile:
+a.out: main.pl
 	swipl --goal=main -c main.pl
 clean:
 	rm ./a.out

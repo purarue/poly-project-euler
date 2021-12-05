@@ -1,9 +1,9 @@
 CC=gcc
 CFLAGS=-O -Wall
 
-run: compile
+run: main
 	./main
-compile: main.c
+main: main.c
 	$(CC) $(CFLAGS) -o main main.c
 clean:
 	rm main
