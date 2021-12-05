@@ -47,5 +47,5 @@ Purpose for this is dependent on the language/problem. If its a language I'm fam
 - [Problem \#48](https://projecteuler.net/problem=48): [`clojure`](./048-clojure/) (Clojure 1.10.1)
 - [Problem \#52](https://projecteuler.net/problem=52): [`ML`](./052-ML/) (Standard ML of New Jersey (64-bit) v110.98.1)
 - [Problem \#67](https://projecteuler.net/problem=67): [`golang`](./067-golang/) (go version go1.14.1 linux/amd64)
-- [Problem \#206](https://projecteuler.net/problem=206): [`ocaml`](./206-ocaml/) (The OCaml toplevel, version 4.12.0)
+- [Problem \#206](https://projecteuler.net/problem=206): [`ocaml`](./206-ocaml/) (OCaml version 4.12.0)
 
