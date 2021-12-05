@@ -1,10 +1,9 @@
 package main
 
 import (
-	"bufio"
 	"errors"
 	"fmt"
-	"os"
+	"io/ioutil"
 	"strconv"
 	"strings"
 )
@@ -22,38 +21,16 @@ type Node struct {
 
 type Tree [][]Node
 
-// prints the tree with the max value that can be formed
-// with this elment and the items below
-func printTree(tree *Tree) {
-	for _, x := range *tree {
-		for _, y := range x {
-			fmt.Printf("(%02d, %02d) ", y.Val, y.MaxVal)
-		}
-		fmt.Println()
-	}
-}
-
 // parse the data file into the Tree
-func loadData(path string) (*Tree, error) {
+func loadTree(path string) (*Tree, error) {
 	// open file
-	file, err := os.Open(path)
+	treeBytes, err := ioutil.ReadFile(path)
 	if err != nil {
 		return nil, err
 	}
-	defer file.Close()
-
-	// read lines
-	var lines []string
-	scanner := bufio.NewScanner(file)
-	for scanner.Scan() {
-		lines = append(lines, scanner.Text())
-	}
-	if scanner.Err() != nil {
-		return nil, scanner.Err()
-	}
 	// parse into Tree
 	var tree Tree
-	for _, line := range lines {
+	for _, line := range strings.Split(strings.TrimSpace(string(treeBytes)), "\n") {
 		var level []Node
 		for _, nodeValue := range strings.Fields(strings.TrimSpace(line)) {
 			nodeInt, _ := strconv.Atoi(nodeValue)
@@ -94,11 +71,10 @@ func calculateMaxValue(tree *Tree, x int, y int) (int, error) {
 }
 
 func main() {
-	tree, err := loadData("./data.txt")
+	tree, err := loadTree("./data.txt")
 	if err != nil {
 		panic(err)
 	}
 	maxVal, _ := calculateMaxValue(tree, 0, 0)
-	// printTree(tree)
 	fmt.Printf("%d\n", maxVal)
 }
