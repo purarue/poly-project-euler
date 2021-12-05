@@ -17,7 +17,7 @@ proc simplifyFrac(frac: Fraction): Fraction =
 proc divideFrac(frac: Fraction): float =
   return frac.numerator / frac.denominator
 
-proc fractionCancels(orig: Fraction, newFracNum: int, newFracDen: int): bool =
+proc sameFraction(orig: Fraction, newFracNum: int, newFracDen: int): bool =
   return divideFrac(orig) == divideFrac(Fraction(numerator: newFracNum, denominator: newFracDen))
 
 proc isCuriousFraction(frac: Fraction): bool =
@@ -32,16 +32,16 @@ proc isCuriousFraction(frac: Fraction): bool =
     return false
 
   # left cancelled left
-  if numTens == denTens and fractionCancels(frac, numOnes, denOnes):
+  if numTens == denTens and sameFraction(frac, numOnes, denOnes):
       return true
   # left cancelled right
-  if numTens == denOnes and fractionCancels(frac, numOnes, denTens):
+  if numTens == denOnes and sameFraction(frac, numOnes, denTens):
       return true
   # right cancelled left
-  if numOnes == denTens and fractionCancels(frac, numTens, denOnes):
+  if numOnes == denTens and sameFraction(frac, numTens, denOnes):
       return true
   # right cancelled right
-  if numOnes == denOnes and fractionCancels(frac, numTens, denTens):
+  if numOnes == denOnes and sameFraction(frac, numTens, denTens):
       return true
   return false
 
