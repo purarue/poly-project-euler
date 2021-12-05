@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-from typing import Iterator, Sequence
+from typing import Iterator
 
 
 def isprime(n: int) -> bool:
