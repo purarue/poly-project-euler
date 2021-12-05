@@ -1,5 +1,5 @@
 #include <cmath>    // sqrt
-#include <iostream> //printf
+#include <iostream> // printf
 
 bool is_prime(int n) {
   if (n < 2) {

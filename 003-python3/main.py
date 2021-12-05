@@ -1,34 +1,30 @@
 #!/usr/bin/env python3
 
-from typing import Iterator
+from typing import Iterator, Sequence
 
 
 def isprime(n: int) -> bool:
-    if n < 2:
+    # (even check)
+    if not n & 1 or n < 2:
         return False
     elif n == 2:
         return True
-    elif not n & 1:  # if even
-        return False
     else:
-        for p in range(3, int(n ** 0.5) + 2, 2):
+        for p in range(3, int(n ** 0.5) + 1, 2):
             if n % p == 0:
                 return False
     return True
 
 
-def find_prime_factors(n: int) -> Iterator[int]:
-    for x in range(1, int(n ** 0.5) + 2):
+def iter_prime_factors(n: int) -> Iterator[int]:
+    for x in range(1, int(n ** 0.5) + 1):
         if n % x == 0 and isprime(x):
             yield x
 
 
-def main() -> None:
-    last: int = -1
-    for x in find_prime_factors(600851475143):
-        last = x
-    print(last)
+def solve(n: int) -> int:
+    return next(reversed(list(iter_prime_factors(n))))
 
 
 if __name__ == "__main__":
-    main()
+    print(solve(600851475143))
