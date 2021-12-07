@@ -22,11 +22,13 @@ bool is_prime(int n) {
 int main() {
   int primes_seen = 0;
   int num = 2;
-  while (primes_seen < 10001) {
+  while (true) {
     primes_seen += is_prime(num);
+    if (primes_seen == 10001) {
+      break;
+    }
     num++;
   }
-  printf("%d\n",
-         num - 1); // undo the last increment before loop condition check
+  printf("%d\n", num);
   return 0;
 }
