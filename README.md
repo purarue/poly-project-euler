@@ -4,10 +4,6 @@ Solutions to [Project Euler](https://projecteuler.net), using distinct languages
 
 Run `make` in any directory to run.
 
-Purpose for this is dependent on the language/problem. If its a language I'm familiar with, I'll implement it on my own, and try and look up related math to optimize. If its one I'm not, I'll try and learn the basics and implement something. If solutions for euler exist in that language, I'll may reference them to get a better understanding of the language.
-
----
-
 - [Problem \#1](https://projecteuler.net/problem=1): [`prolog`](./001-prolog/) (SWI-Prolog version 8.0.3)
 - [Problem \#2](https://projecteuler.net/problem=2): [`haskell`](./002-haskell/) (ghc v8.6.5)
 - [Problem \#3](https://projecteuler.net/problem=3): [`python3`](./003-python3/) (python 3.8.0)
