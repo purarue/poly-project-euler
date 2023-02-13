@@ -45,4 +45,3 @@ Run `make` in any directory to run.
 - [Problem \#67](https://projecteuler.net/problem=67): [`golang`](./067-golang/) (go version go1.14.1 linux/amd64)
 - [Problem \#119](https://projecteuler.net/problem=119): [`typescript`](./119-typescript/) (typescript 4.5.2)
 - [Problem \#206](https://projecteuler.net/problem=206): [`ocaml`](./206-ocaml/) (OCaml version 4.12.0)
-

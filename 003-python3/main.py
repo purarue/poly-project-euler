@@ -10,14 +10,14 @@ def isprime(n: int) -> bool:
     elif n == 2:
         return True
     else:
-        for p in range(3, int(n ** 0.5) + 1, 2):
+        for p in range(3, int(n**0.5) + 1, 2):
             if n % p == 0:
                 return False
     return True
 
 
 def iter_prime_factors(n: int) -> Iterator[int]:
-    for x in range(1, int(n ** 0.5) + 1):
+    for x in range(1, int(n**0.5) + 1):
         if n % x == 0 and isprime(x):
             yield x
 

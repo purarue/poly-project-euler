@@ -14,4 +14,3 @@ while IFS= read -r readme; do
   printf '%s [Problem \#%d](https://projecteuler.net/problem=%d): [`%s`](./%s/) (%s)\n' '-' "${euler_prob}" "${euler_prob}" "${lang_name}" "$(dirname "${readme}" | cut -d"/" -f2- | php -r 'echo urlencode(trim(fgets(STDIN)));')" "${lang_ver}"
 done < <(find . -mindepth 2 -name README.md | sort -n)
 ```
-
