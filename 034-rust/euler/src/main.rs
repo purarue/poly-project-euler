@@ -14,13 +14,11 @@ fn digit_factorial(n: u64) -> u64 {
         .chars()
         .map(|d| d.to_digit(10).unwrap() as u64)
         .map(factorial)
-        .collect::<Vec<_>>()
-        .into_iter()
         .sum()
 }
 
 fn is_curious_number(n: u64) -> bool {
-    n == digit_factorial(n)
+    digit_factorial(n) == n
 }
 
 fn main() {
@@ -28,8 +26,6 @@ fn main() {
         "{}",
         (LOWER_BOUND..UPPER_BOUND_GUESS)
             .filter(|&x| is_curious_number(x))
-            .collect::<Vec<u64>>()
-            .into_iter()
             .sum::<u64>()
     )
 }
