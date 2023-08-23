@@ -3,4 +3,4 @@ run: main.beam
 main.beam: main.erl
 	erlc main.erl
 clean:
-	rm main.beam erl_crash.dump
+	rm -f main.beam erl_crash.dump

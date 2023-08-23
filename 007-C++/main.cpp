@@ -20,14 +20,14 @@ bool is_prime(int n) {
 }
 
 int main() {
-  int primes_seen = 0;
-  int num = 2;
+  int primes_seen = 1;
+  int num = 3;
   while (true) {
     primes_seen += is_prime(num);
     if (primes_seen == 10001) {
       break;
     }
-    num++;
+    num += 2;
   }
   printf("%d\n", num);
   return 0;
