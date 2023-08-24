@@ -6,4 +6,4 @@ run: main
 main: main.c
 	$(CC) $(CFLAGS) -o main main.c
 clean:
-	rm main
+	rm -f main

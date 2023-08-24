@@ -1,5 +1,5 @@
 CXX=g++
-CXXFLAGS=-std=c++17 -Wall -O2
+CXXFLAGS=-std=c++17 -Wall -O3
 EXECUTABLE_NAME=main
 SOURCE=main.cpp
 OBJECT=main.o
@@ -16,5 +16,4 @@ main.o: $(SOURCE)
 	$(CXX) $(CXXFLAGS) -c $(SOURCE)
 
 clean:
-	rm $(EXECUTABLE_NAME) $(OBJECT)
-
+	rm -f $(EXECUTABLE_NAME) $(OBJECT)
