@@ -15,7 +15,7 @@ type Node struct {
 	// node value
 	Val int
 	// represents the max with this node and the L/R nodes below
-	// -1 is a sentinel value to represent this hasnt been processed yet
+	// -1 is a sentinel value to represent this hasn't been processed yet
 	MaxVal int
 }
 
@@ -42,7 +42,7 @@ func loadTree(path string) (*Tree, error) {
 }
 
 // calculates the max value you can get for a particular X, Y position.
-// if either of the children's max value hasnt been processed yet
+// if either of the children's max value hasn't been processed yet
 // calls those first (which calls their children, recursively)
 func calculateMaxValue(tree *Tree, x int, y int) (int, error) {
 	if x >= len(*tree) {

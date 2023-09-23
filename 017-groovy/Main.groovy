@@ -45,7 +45,7 @@ Integer count_letters(Integer number) {
   if (number > 999) {
     count += 11 // onethousand
   }
-  //hundreths place
+  // hundredths place
   if (number >= 100) {
     count += ones[get_place(number, 2)]
   }

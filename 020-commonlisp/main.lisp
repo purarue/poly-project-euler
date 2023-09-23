@@ -6,7 +6,7 @@
   )
 
 (defun digitsum (char-list &optional (listsum 0))
-  "Given a list of characters (char-list), caluclates the digit sum"
+  "Given a list of characters (char-list), calculates the digit sum"
   (if (endp char-list) ;; if list is empty
     listsum
     (digitsum

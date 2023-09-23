@@ -8,7 +8,7 @@ import String exposing (dropLeft, left, length)
 
 
 
--- calulates n to the mth power
+-- calculates n to the mth power
 
 
 nthPower : BigInt -> BigInt -> BigInt

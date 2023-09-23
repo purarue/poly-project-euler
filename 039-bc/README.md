@@ -2,7 +2,7 @@
 
 Language: bc 1.07.1
 
-(Yes, the same `bc` thats used to do little bits of floating-point math in the shell)
+(Yes, the same `bc` that's used to do little bits of floating-point math in the shell)
 
 ##### Requires
 

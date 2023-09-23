@@ -19,7 +19,7 @@ isPandigital: n
     | s st |
     s := n printString.
     st := s asSet.
-    (st includes: $0) ifTrue: [ ^ false. ]. " cant have 0 "
+    (st includes: $0) ifTrue: [ ^ false. ]. " can't have 0 "
     ^ (st size == (st asSortedCollection last digitValue))
 !
 solve

@@ -18,7 +18,7 @@ for (a = 1; a < side_limit; a++) {
       perimeter = a + b + c
       if (perimeter <= perimeter_limit && is_valid_triangle(a, b, c) && is_right_triangle(a, b, c)) {
         print a, " + ", b, " + ", c, " = ", perimeter, "\n"
-        /* the variable assignment is just so this doesnt print anything */
+        /* the variable assignment is just so this doesn't print anything */
         x_ = solutions[perimeter]++
       }
     }

@@ -32,7 +32,7 @@ public class HelloWorld {
         max = (temp > max) ? temp : max;
       }
     }
-    // diagnol NW/SE
+    // diagonal NW/SE
     for (int i = 0; i <= 16; i++) {
       for (int j = 0; j <= 16; j++) {
         temp = matrix[i, j] * matrix[i + 1, j + 1] * matrix[i + 2, j + 2] *
@@ -40,7 +40,7 @@ public class HelloWorld {
         max = (temp > max) ? temp : max;
       }
     }
-    // diagnol NE/SW
+    // diagonal NE/SW
     for (int i = 3; i < 20; i++) {
       for (int j = 0; j <= 16; j++) {
         temp = matrix[i, j] * matrix[i - 1, j + 1] * matrix[i - 2, j + 2] *
