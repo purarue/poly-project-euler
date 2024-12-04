@@ -11,7 +11,9 @@ function find_sum_under(max_val)
     local sum = 0
     local i = 2
     while i < max_val do
-        if fifth_power_sum(i) == i then sum = sum + i end
+        if fifth_power_sum(i) == i then
+            sum = sum + i
+        end
         i = i + 1
     end
     return sum
